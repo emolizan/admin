@@ -23,7 +23,7 @@ export default {
   },
   methods: {
     login(){
-      alert('登录成功');
+      this.$router.push({path:'/index'})
     }
   }
 }
