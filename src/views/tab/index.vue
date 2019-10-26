@@ -2,7 +2,7 @@
 <el-container style="min-height:1000px;height:100%">
   <el-aside width="">
     <div class="menu">
-        <div style="height:20px;">
+        <div style="height:60px;background:#B3C0D1">
           <span>
             <i :class="[isCollapse==true ?'el-icon-d-arrow-right':'el-icon-d-arrow-left']" @click="openclose"></i>
           </span>
@@ -35,7 +35,7 @@
     
     </el-header>
     <el-main>
-        <el-tabs v-model="editableTabsValue" type="card" editable @edit="handleTabsEdit">
+        <el-tabs v-model="editableTabsValue" type="card" closable @edit="handleTabsEdit">
           <el-tab-pane
             :key="item.name"
             v-for="(item, index) in editableTabs"
